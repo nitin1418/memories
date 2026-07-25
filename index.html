@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Journey of Our Memories</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="particles"></div>
+
+    <!-- GATEKEEPER FRONT PAGE -->
+    <section id="gatekeeper" class="intro" style="position: fixed; width: 100vw; z-index: 1000; top: 0; left: 0;">
+        <div class="intro-content glass gatekeeper-card">
+            <h2 style="font-size: 2rem; margin-bottom: 10px; color: var(--accent);">Wait! ✋</h2>
+            <p>WHAT IS MY PET NAME 🤔</p>
+            <input type="text" id="bday-input" placeholder="Type here...">
+            <p id="bday-error" class="error-msg"
+                style="display: none; color: #e74c3c; font-weight: bold; font-size: 0.9rem; margin: -10px 0 10px 0;">
+                Wrong answer! Try again 😂</p>
+            <button id="unlock-btn">Unlock</button>
+        </div>
+    </section>
+
+    <!-- WRAPPED MAIN CONTENT -->
+    <div id="main-content" style="display: none;">
+
+        <audio id="bg-music" loop>
+            <source src="The-Metro-Proposal-MassTamilan.dev.mp3" type="audio/mpeg">
+        </audio>
+
+        <button id="music-toggle" aria-label="Play/Pause Music">
+            <svg id="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+            </svg>
+            <svg id="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+            </svg>
+        </button>
+
+        <header class="intro" id="main-header">
+            <div class="intro-content glass">
+                <h1>A Journey of Our Memories 💜</h1>
+                <p>This is not just a page... it's a celebration of every moment we've shared.</p>
+            </div>
+        </header>
+
+        <section class="roadmap" id="roadmap">
+            <svg class="roadmap-svg" id="roadmap-svg">
+                <path id="roadmap-path"></path>
+            </svg>
+
+            <!-- Memory 1 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./1.jpeg" alt="Where It All Began">
+                    </div>
+                    <h2>Where It All Began 🤝✨</h2>
+                    <p>This was the day we first met each other. Our very first conversation happened in this place—an unforgettable place where our journey began. 💜🌸</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 2 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./2.jpeg" alt="Our First Group Photo">
+                    </div>
+                    <h2>Our First Group Photo 📸💫</h2>
+                    <p>This was the very first group photo we all took together. Coincidentally, I was standing right behind you without either of us noticing. 🌌✨💖</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 3 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./3.jpeg" alt="An Unexpected Memory">
+                    </div>
+                    <h2>An Unexpected Memory 🤳🥰</h2>
+                    <p>You were taking a selfie without realizing I was in the frame. After we became close friends, you sent me this picture, and it became one of my favorite memories. 🌸✨❤️</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 4 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./4.jpeg" alt="The Beginning of Our Bond">
+                    </div>
+                    <h2>The Beginning of Our Bond 🪔🌱</h2>
+                    <p>This was the day our friendship truly began. It was during the Ayudha Pooja celebration in our department that we had our first meaningful conversation. Looking back now, it feels like the universe had already planned our friendship long before we realized it. From that moment, our beautiful bond slowly began to grow. ✨👯‍♀️💖</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 5 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <video src="./5.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>Our First Video Together 🎬🤪</h2>
+                    <p>This was the first video we ever took together. It's one of those unforgettable memories, and you even edited a beautiful video using this clip. 🎥💖✨</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 6 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./6.jpeg" alt="Memory 6" style="object-position: center;">
+                    </div>
+                    <h2>1st only for me moment 🌸👗</h2>
+                    <p>iethu andha nal un dress colour la irundha flower ah na unaku kuduthan , apoo ne eduthu anupuna
+                        photo.. 🌸👗🥺✨</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 7 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <video src="./7.mp4" class="rotate-landscape" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>an complete day with u 😂💖</h2>
+                    <p>eathoo ouru mari jolly ah , neriyaa sericha nal iethu , rompa nalla iruntuchu.. soi la 😂💖🥳</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 8 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <video src="./8.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>kind of care 🥜🍫</h2>
+                    <p>indhu than ne enaku vendi nuts lam vangitu vandha 2nd day and ipo varaikum aathu than last , but
+                        iethu putusaa iruntuchu "unaku vangunaa" with kinderjoy oda.. 🥜🍫🥺</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 9 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <video src="./9.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>2nd day out 🎢🏃‍♀️</h2>
+                    <p>indha nal nama rendu perum ona outing pona nal , an well planed day with u . but last la than
+                        unga amma kuputanga so konjam hurry aagirichu.. 🎢🏃‍♀️😅❤️</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 10 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <video src="./10.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>Teasing & Fun Moments 🚌😁</h2>
+                    <p>ouru nal naal ku ouru nalla closer mari , bus ku ne wait panum pothu jolly ah una kalaichutu
+                        irundhaa, "daii meesai vacha paiya nu 😁" 🚌😂😜</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 11 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./11.jpeg" alt="Memory 11">
+                    </div>
+                    <h2>onam with u 🌸✨</h2>
+                    <p>iethu unaku nalaveaa nayabagam irukum onam apo eduthatu, ipo nenachaa kuda chaa nalla nal laa nu
+                        tonum 🌸✨🥰</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 12 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./12'.jpeg" alt="A Secret I Still Found">
+                    </div>
+                    <h2>A Secret I Still Found 🔍😄</h2>
+                    <p>This picture was posted on our college website. You didn't want me to see it, but somehow I found it and took a screenshot. 😄📸✨</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 13 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./13.jpeg" alt="Memory 13">
+                    </div>
+                    <h2>Go-Kart Memories 🏎️🥺</h2>
+                    <p>aprm indha photo , ne go-kart poita enaku eathoo rompa thaniyaa irukura mari iruntuchu pathaa nee
+                        ietha anupunaa konjam ok aana aprm tha , ietha photo ah eduka na ouru kastam pattan paru..
+                        🏎️🥺😅❤️</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 14 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./14.jpeg" alt="Memory 14">
+                    </div>
+                    <h2>Tea Time Story ☕😂</h2>
+                    <p>iethu aadutha nal neangaa engaiyoo tea kudika nikum pothu eduthatu nu sona , pathaa story
+                        potutaa.... ☕😂🤦‍♀️</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 15 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./15.jpeg" alt="Memory 15">
+                    </div>
+                    <h2>Go-Kart Jersey 👕🏎️</h2>
+                    <p>iethu na una thoola pani vangunathu, ungaluku go-kart jearsy kudutha aprm eduthatu, 👚🏎️🥺💖</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 16 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./16.jpeg" alt="Memory 16">
+                    </div>
+                    <h2>Special Message 🥺😭</h2>
+                    <p>iethu en nee ipdi anupuna nu therla , enala nambavea mudilaa nee than ena ipdi solriyaa nu ,ietha
+                        pathu ouru santosam vantuchu paruu... 🥺😭💖</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 17 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./17.jpeg" alt="Memory 17">
+                    </div>
+                    <h2>Best Friend Reel 🥹🫂</h2>
+                    <p>indha reel ah ne enaku anupuna, apo than purinjichu nee ena ouru nalla best friend oda edathula
+                        vachu iruka nu , ana first enaku meaning purila then google la potu than kandu pudichaa...
+                        🥹🫂🔎</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 18 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./18.jpeg" alt="Memory 18">
+                    </div>
+                    <h2>Stall Photo 📸⛺</h2>
+                    <p>kandipaa iethu nayabagam irukum , stall pota apo nama ona eduthaa oera oru photo , nalla iruku la
+                        📸⛺🥰❤️</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 19 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./19.jpg" alt="God's Perfect Plan">
+                    </div>
+                    <h2>God's Perfect Plan 🍱✨</h2>
+                    <p>This was one of God's biggest plans to make our bond even stronger. We got the opportunity to go on an internship together. This photo was taken while we were having lunch at a small food stall. It was your first time eating there, and it became a special memory for both of us. 💜🌟</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 20 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <video src="./20.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>The Happiest Moments 🎮😊</h2>
+                    <p>During our internship, we had so much fun playing trending games. In this video, you look genuinely happy, and seeing that smile was more than enough for me. 😂💖✨</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 21 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./21.jpg" alt="One Last Selfie">
+                    </div>
+                    <h2>One Last Selfie 🤳🌅</h2>
+                    <p>This selfie was taken after we had lunch during our internship. It holds so many beautiful memories and also marks the last day of our internship together. 🌟🥰✨</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 22 -->
+            <div class="memory-point" data-side="right">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./22.jpg" alt="One Year of Friendship">
+                    </div>
+                    <h2>One Year of Friendship 🏫💫</h2>
+                    <p>A random classroom selfie after stepping into our third year. By then, we had already completed one beautiful year of friendship together, creating countless memories along the way. 📸✨💜</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Memory 23 -->
+            <div class="memory-point" data-side="left">
+                <div class="memory-card glass">
+                    <div class="img-wrapper">
+                        <img src="./23.jpg" alt="A Gift from My Family">
+                    </div>
+                    <h2>A Gift from My Family 🎁✨</h2>
+                    <p>In this picture, you're wearing the bangles that my sister bought for you. You told me it was the first gift you had ever received from my family. We were both so excited because my mom had also helped choose them. Seeing you wear them made that moment even more special. 🥳💙💖</p>
+                </div>
+                <div class="dot"></div>
+            </div>
+        </section>
+
+        <section class="ending">
+            <div class="ending-content glass">
+                <h2>No matter where life takes us...</h2>
+                <p>These memories will always stay right here.</p>
+                <div class="heart">💙</div>
+                <p class="thank-you">Thank you for being in my life.</p>
+                <a href="https://digibouquet.vercel.app/bouquet/1dd6221d-1a84-41ce-913b-ad322fcb3e55" target="_blank"
+                    class="gift-box" title="Open Your Gift!">
+                    <div class="gift-icon">🎁</div>
+                    <span>Click for a surprise!</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
